@@ -1,0 +1,49 @@
+/******************************************************************
+
+		Name: Adventskalender Styles
+		Description: 
+		Author: Thomas Gull
+		Author URI: gulldesign.ch
+		Version: v2.0
+		Release: 2021-11-05
+		License: Public Licence
+
+******************************************************************/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*==============================================================================
+  MEDIA QUERIES
+==============================================================================*/
+/*----------------------------------------------------------------------------
+  PRINT
+----------------------------------------------------------------------------*/
+@media print {
+	
+}
+
+/*----------------------------------------------------------------------------
+  MOBILE
+----------------------------------------------------------------------------*/
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.ct-chart .ct-bar {
+		stroke-width: 10px;
+	}
+}
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.ct-chart .ct-bar {
+		stroke-width: 15px;
+	}
+}
+
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+	.ct-chart .ct-bar {
+		stroke-width: 20px;
+	}
+}
