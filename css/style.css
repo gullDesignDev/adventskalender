@@ -12,8 +12,39 @@
 body {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
 }
 
+.wrapper {
+	padding: 10px 20px;
+	width: 1200px;
+	box-shadow: 0 0 30px #444;
+	border-radius: 15px;
+	margin: 20px auto;
+}
+
+.calendarWrapper ul li.calendarDoor {
+	display: inline-block;
+	width: calc((100% - 3em ) / 3);
+	/* height: 240px; */
+	background-color: rgb(228, 228, 228);
+	margin: 0 1em 1em 0;
+	text-align: center;
+}
+
+.calendarWrapper ul li.calendarDoor img {
+	width: 100%;
+}
+
+.calendarWrapper ul li.calendarDoor.open {
+	background-color: lightsalmon;
+}
+
+.calendarWrapper ul li.calendarDoor::after {
+	content: attr(data-date);
+}
 /*==============================================================================
   MEDIA QUERIES
 ==============================================================================*/
@@ -29,21 +60,15 @@ body {
 ----------------------------------------------------------------------------*/
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (max-width: 40em) {
-	.ct-chart .ct-bar {
-		stroke-width: 10px;
-	}
+	
 }
 
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	.ct-chart .ct-bar {
-		stroke-width: 15px;
-	}
+	
 }
 
 /* min-width 1025px, large screens */
 @media only screen and (min-width: 64.063em) {
-	.ct-chart .ct-bar {
-		stroke-width: 20px;
-	}
+	
 }
